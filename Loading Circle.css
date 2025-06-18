@@ -1,0 +1,26 @@
+body{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.text{
+    font-size: 30px;  
+}
+
+.loading{
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 60%;
+    border: 5px solid rgba(189,189,189 ,0.25);
+    border-top-color: rgb(252, 2, 2);
+    border-left-color: rgb(255, 0, 0);
+    animation: rotate 500ms infinite linear;
+    
+}
+
+@keyframes rotate {to{
+    transform: rotate(1turn);
+}}

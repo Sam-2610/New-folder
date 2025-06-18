@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0;
+    background-color: papayawhip;
+    
+}
+
+html{
+    border:5px solid black;
+    border-bottom: 0px;
+    border-top: 0px;        
+    margin-left:20%;
+    margin-right:20%;  
+    
+}  
+
+.container{
+    text-align: center;
+}
+
+.first{
+    padding:70px;
+}
+
+.last{
+    padding:70px;
+  
+}
+
+.email{
+    padding: 70px;
+}
+
+.job{
+    padding: 70px;  
+}
+
+.address{
+    padding: 70px;  
+}
+
+.city{
+    padding: 70px;
+}
+
+.pincode{
+    padding: 70px;
+}
+.btn{
+    background-color: orangered;
+    font-size: 18px;
+    padding:5px;
+    border-radius:10px;
+    margin-left:42%;
+}

@@ -1,0 +1,29 @@
+body{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial;
+    background-image: linear-gradient(lime,purple);
+}
+
+p{
+    font-size: 40px;
+}
+
+button{
+    margin-left:43%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.is{
+    background-color: rgb(240,240,240);
+    color: black;
+}
