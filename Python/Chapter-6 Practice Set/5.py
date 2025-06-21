@@ -1,3 +1,6 @@
+""" Write a program which finds out whether a given name is present in a list or not. """
+
+
 l = ['Sam', 'John', 'Sara', 'Tom', 'Jerry']
 x = input("Enter the name: ")
 
