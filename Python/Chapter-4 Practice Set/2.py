@@ -3,7 +3,8 @@ manner.  """
 
 marks = []
 for i in range(6):
-    x =int(input(f"Enter the marks of student {i+1}:"))
+    x = int(input(f"Enter the marks of student {i+1}: "))
     marks.append(x)
-    marks.sort()
-print("Marks list:", marks)
+
+marks.sort()
+print("Sorted Marks list:", marks)

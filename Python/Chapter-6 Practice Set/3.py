@@ -3,18 +3,21 @@
 to detect these spams.'''
 
 
-str = input("Enter a string: ")
+message = input("Enter a string: ").lower()
 
-if str.lower() == "make a lot of money":
-    print("This is a Spam Message")
-elif str.lower() == "buy now":
-    print("This is a Spam Message")
-elif str.lower() == "subscribe this":
-    print("This is a Spam Message")
-elif str.lower() == "click this":
+spam_phrases = ["make a lot of money", "buy now", "subscribe this", "click this"]
+
+is_spam = False
+for phrase in spam_phrases:
+    if phrase in message:
+        is_spam = True
+        break
+
+if is_spam:
     print("This is a Spam Message")
 else:
-    print("This is not a spam Message")
+    print("This is not a Spam Message")
+
 
 
 

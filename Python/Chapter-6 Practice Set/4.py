@@ -5,6 +5,6 @@ characters or not.  """
 username = input("Enter Your Username:")
 
 if len(username) <= 10:
-    print("Username is less than 10 characters./n Username Created")
+    print("Username is less than 10 characters.\n Username Created")
 else:
-    print("Username is more than 10 characters./n Username not Created")    
+    print("Username is more than 10 characters.\n Username not Created")    
