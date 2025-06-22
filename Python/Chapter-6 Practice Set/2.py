@@ -14,11 +14,11 @@ phy  = int(input("Enter the marks of Physics out of 100:"))
 chem  = int(input("Enter the marks of Chemistry out of 100:"))
 cs  = int(input("Enter the marks of Computer Science out of 100:"))
 
-Percentage_eng = eng /100 *100
-Percentage_math = math /100 *100
-Percentage_phy = phy /100 *100
-Percentage_chem = chem/100 *100
-Percentage_cs = cs /100 *100
+Percentage_eng = eng 
+Percentage_math = math 
+Percentage_phy = phy 
+Percentage_chem = chem
+Percentage_cs = cs 
 Percentage_Total = (eng + math + phy + chem + cs) / 500 * 100
 
 if Percentage_eng < 33:
