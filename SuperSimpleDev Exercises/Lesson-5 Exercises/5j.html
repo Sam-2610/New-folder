@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0., initial-scale=1.0">
+    <title>Document</title>
+    
+      
+</head>
+<body>
+ <p>Cart Quantity</p>
+ <button onclick="showCartQuantity()">Show Quantity</button>
+ <button onclick="addToCart()">Add to Cart</button>
+ <button onclick="updateCartQuantity(2)">+2</button>
+ <button onclick="updateCartQuantity(3)">+3</button>
+ <button onclick="updateCartQuantity(4)">+4</button>
+ <button onclick="updateCartQuantity(5)">+5</button>
+ <button onclick="decreaseCartQuantity(5)">Remove From Cart</button>
+ <button onclick="decreaseCartQuantity(2)">-2</button>
+ <button onclick="decreaseCartQuantity(3)">-3</button>
+ <button onclick="resetCartQuantity()">Reset Quantity</button>
+</body>
+<script>
+    let cartQuantity = 0;
+
+function showCartQuantity() {
+    console.log("Cart Quantity:", cartQuantity);
+}
+
+function addToCart() {
+    cartQuantity++;
+    console.log("Added to cart. Cart Quantity:", cartQuantity);
+}
+
+function updateCartQuantity(amount) {
+    cartQuantity += amount;
+    console.log("Updated cart quantity. Cart Quantity:", cartQuantity);
+}
+
+function decreaseCartQuantity(amount) {
+    cartQuantity -= amount;
+    console.log("Updated cart quantity. Cart Quantity:", cartQuantity);
+}
+
+
+function resetCartQuantity() {
+    cartQuantity = 0;
+    console.log("Cart quantity reset. Cart Quantity:", cartQuantity);
+}
+
+</script>
+</html>
