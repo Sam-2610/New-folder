@@ -1,3 +1,6 @@
+""" Write a python function to remove a given word from a list ad strip it at the same 
+time.  """
+
 def remove_word(word_list, word_to_remove):
     new_list = []
     for word in word_list:
