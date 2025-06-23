@@ -1,3 +1,6 @@
+/* using a multi-line string, create the text from 3h and add a line of text
+underneath: 'Thank you, come again!'. Display both lines in a popup. */
+
 let coffee = 5.99;
 let bagel = 2.95;
 let total = (coffee + bagel) * 100; 
