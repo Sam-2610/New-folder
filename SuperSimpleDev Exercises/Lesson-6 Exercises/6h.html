@@ -1,0 +1,26 @@
+<!-- Instead of displaying 'heads' or 'tails' in the console, save the result
+in a variable called 'result'. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss</title>
+</head>
+<body>
+    <script>
+        const rand = Math.random();
+        let result;
+        
+
+        if (rand <= 0.5) {
+            result = "Tails!"
+        } else {
+            result = "Heads!"
+        }
+
+        console.log(result);
+    </script>
+</body>
+</html>
