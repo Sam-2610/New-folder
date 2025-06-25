@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Length Converter</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to) {
+      // Convert all units to feet first
+      const toFeet = {
+        km: 3281,     // 1 km = 3281 feet (approx)
+        miles: 5280,  // 1 mile = 5280 feet
+        ft: 1         // base unit
+      };
+
+      // If same unit, return as-is
+      if (from === to) {
+        return `${length} ${to}`;
+      }
+
+      // Convert from source to feet
+      const inFeet = length * toFeet[from];
+
+      // Convert from feet to target unit
+      const converted = inFeet / toFeet[to];
+
+      // Round and return result
+      return `${Math.round(converted)} ${to}`;
+    }
+
+    // Test cases
+    console.log(convertLength(5, 'miles', 'km'));  // '8 km'
+    console.log(convertLength(5, 'miles', 'ft'));  // '26400 ft'
+    console.log(convertLength(5, 'km', 'ft'));     // '16405 ft'
+    console.log(convertLength(1000, 'ft', 'km'));  // ~0.3 km
+  </script>
+</body>
+</html>

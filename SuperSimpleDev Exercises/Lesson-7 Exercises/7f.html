@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Celsius to Fahrenheit</title>
+</head>
+<body>
+    <script>
+        function convertToCelsius(fahrenheit) {
+            const celsius = (fahrenheit - 32) * 5 / 9;
+            console.log(`${fahrenheit}°F is equal to ${celsius.toFixed(2)}°C`);
+        }
+
+        function convertToFahrenheit(celsius) {
+            const fahrenheit = (celsius * 9 / 5) + 32;
+            console.log(`${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F`);
+        }
+
+        
+        convertToFahrenheit(22);   
+        convertToCelsius(71.6);    
+    </script>
+</body>
+</html>
