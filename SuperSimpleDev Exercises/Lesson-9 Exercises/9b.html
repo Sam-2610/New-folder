@@ -1,0 +1,22 @@
+<!-- Continuing from 9a, create another button <button>9b</button>
+below. Using JavaScript, change the text in the second button to
+'9b done!' (hint: add a class and use .querySelector). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn-9a">9a</button>
+    <button class="btn-9b">9b</button>
+
+    <script>
+        const btn9b = document.querySelector('.btn-9b');
+        btn9b.innerText = "9b Done!";
+        console.log(btn9b.innerText);
+    </script>
+</body>
+</html>

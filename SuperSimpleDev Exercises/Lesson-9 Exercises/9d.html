@@ -1,0 +1,25 @@
+<!-- Create a text box (<input>) and a submit button. When clicking
+'Submit', display 'Your name is: ${text}' on the page (${text} = the text
+inside the text box) (hint: use .value to get the text inside an <input>). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Name</title>
+</head>
+<body>
+    <p>Enter your name:</p>
+    <input type="text" class="name-input" placeholder="Your name">
+    <button onclick="displayName()">Submit</button>
+    
+    <p class="output"></p>
+
+    <script>
+        function displayName() {
+            const name = document.querySelector('.name-input').value;
+            document.querySelector('.output').innerText = `Your name is: ${name}`;
+        }
+    </script>
+</body>
+</html>

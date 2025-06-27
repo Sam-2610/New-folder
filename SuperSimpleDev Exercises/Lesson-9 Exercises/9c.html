@@ -1,0 +1,31 @@
+<!-- Create 2 buttons 'heads' and 'tails', and a
+paragraph (<p></p>) underneath. When
+clicking the 'heads' button, display
+'You chose: heads' in the paragraph. When
+the 'tails' button, display 'You chose: tails'. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads or Tails</title>
+</head>
+<body>
+    <button onclick="choose('Heads')">Heads</button>
+    <button onclick="choose('Tails')">Tails</button>
+    <button onclick="clearChoice()">Reset</button>
+    
+    <p class="output"></p>
+
+    <script>
+        function choose(option) {
+            document.querySelector('.output').innerText = `You chose: ${option}`;
+        }
+
+        function clearChoice() {
+            document.querySelector('.output').innerText = "";
+        }
+    </script>
+</body>
+</html>
