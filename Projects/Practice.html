@@ -6,6 +6,56 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="SuperSimpleDev Exercises/Lesson-3 Exercises/3j.js"></script>
+    <p>Amazon Shipping Calculator</p>
+    <p class="info">Information</p>
+    
+    <hr>
+    <ol>
+        <li>Orders Below <b>40$</b> will add <b>10$</b> Shipping Charge.</li>
+        <br>
+        <p class="a">Enter the Amount:</p> <input class="inf">
+        <button onclick="Calculate();">Calculate</button>
+        <button class="reset" onclick="clearInput();">Reset</button>
+        
+    </ol>
+    <p class="amount">Your Total Amount:</p><p class="output"></p>
+    <style>
+        p{
+            font-size: 35px;
+        }
+        .info{
+            font-size: 32px;
+        }
+        .inf{
+            font-size: 32px;
+        }
+        li{
+            font-size: 30px;
+        }
+        .a{
+            font-size: 28px;
+        }
+        .amount{
+            font-size: 30px;
+        }
+        
+        
+    </style>
+    <script>
+        function Calculate(){
+            const documentElement = document.querySelector('.inf');
+            let cost = Number(documentElement.value);
+            if(cost < 40){
+                cost = cost + 10;
+            }
+
+            document.querySelector('.output').innerHTML = `$${cost}`;
+        }
+
+         function clearInput() {
+      const ss = document.querySelector('.inf');
+      ss.value = "";  
+    }
+    </script>
 </body>
 </html>
