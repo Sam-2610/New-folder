@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Button Classes</title>
+  <style>
+    button {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(191, 181, 181);
+      color: black;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .active {
+      background-color: green;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="toggleClass(this)">Gaming</button>
+  <button onclick="toggleClass(this)">Music</button>
+  <button onclick="toggleClass(this)">Tech</button>
+
+  <script>
+    function toggleClass(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

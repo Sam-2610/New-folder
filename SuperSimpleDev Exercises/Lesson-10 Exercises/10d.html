@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" onclick="Call();">Gaming</button>
+    <style>
+
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn{
+            background-color:rgb(191, 181, 181);
+            color: black;
+            border-radius: 10px;
+            border: none;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        .active{
+            background-color: green;
+            color: black;
+        }
+    </style>
+    <script>
+        function Call(){
+        const documentElement = document.querySelector('.btn');
+
+    if (documentElement.classList.contains('btn')) {
+        documentElement.classList.toggle('active');
+        console.log("Toggled 'active' class.");
+    }
+}
+
+        
+    </script>
+</body>
+</html>
