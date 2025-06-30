@@ -1,0 +1,25 @@
+<!-- Create a function addOne(array) that takes an array of numbers and
+returns an array where each number is increased by 1. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addOne Function</title>
+</head>
+<body>
+    <script>
+        function addOne(arr) {
+            const total = [];
+            for (let i = 0; i < arr.length; i++) {
+                total.push(arr[i] + 1);
+            }
+            return total; // Important!
+        }
+
+        const result = addOne([1, 2, 3, 4, 5]);
+        console.log(result);  // Output: [2, 3, 4, 5, 6]
+    </script>
+</body>
+</html>

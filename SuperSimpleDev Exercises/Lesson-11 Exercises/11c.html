@@ -1,0 +1,25 @@
+<!-- Create a function arraySwap(array) that takes an array and returns an
+array where the first and last values are swapped (or switched). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function getLastValue(arr){
+        
+        const val = arr.length - 1;
+        const lval = arr[0];
+        arr[0] = arr[val];
+        arr[val] = lval;
+        console.log(arr); 
+       }
+
+       getLastValue([1,2,3,4,5]);
+
+    </script>
+</body>
+</html>
