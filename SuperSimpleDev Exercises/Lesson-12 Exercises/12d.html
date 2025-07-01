@@ -1,0 +1,23 @@
+<!-- Continuing from exercise 12c, modify the button so that when we
+click it, the text immediately changes to 'Loading...', and then after
+1 second, it changes to 'Finished!' -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js">Hello</button>
+    <script>
+        const buttonElement = document.querySelector('.js');
+        buttonElement.addEventListener("click",() =>{
+            buttonElement.innerText = "Loading..."
+            setTimeout(() =>{
+                buttonElement.innerText = "Finished"
+            },1000);
+        });
+    </script>
+</body>
+</html>

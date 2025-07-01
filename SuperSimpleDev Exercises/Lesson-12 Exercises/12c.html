@@ -1,0 +1,21 @@
+<!-- Create the button below. When clicking the button, after 1 second,
+the text inside the button changes to 'Finished!'. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js">Hello</button>
+    <script>
+        const buttonElement = document.querySelector('.js');
+        buttonElement.addEventListener("click",() =>{
+            setTimeout(() =>{
+                buttonElement.innerText = "Finished";
+            },1000);
+        });
+    </script>
+</body>
+</html>
