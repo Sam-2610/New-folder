@@ -1,0 +1,32 @@
+<!-- Create a function isWeekend(date) that takes a DayJS object, and
+returns whether the date is 'Saturday' or 'Sunday' (hint: use solution
+from 15d). Test this function with a few different dates. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day.js Example</title>
+  <!-- Day.js CDN -->
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+</head>
+<body>
+  <script>
+    function isWeekend(){
+    const today = dayjs();
+    const wkend = today.format('dddd');
+    if(wkend === 'Saturday' || wkend === 'Sunday'){
+        return 'Weekend!';
+    } else {
+        return 'Not a Weekend!';
+    }
+
+   
+    }
+
+    console.log(isWeekend());
+    
+  </script>
+</body>
+</html>

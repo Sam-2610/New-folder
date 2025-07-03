@@ -1,0 +1,22 @@
+<!-- Using DayJS, get the date 5 days after today and display it
+in the format: '<Month> <Day of Month>' -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day.js Example</title>
+  <!-- Day.js CDN -->
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+</head>
+<body>
+  <script>
+    const today = dayjs();
+    const updatedDate = today.add(5, 'day'); // Adds 5 days
+
+    console.log("Today:", today.format('YYYY-MM-DD'));
+    console.log("Updated:", updatedDate.format('MMM D'));
+  </script>
+</body>
+</html>

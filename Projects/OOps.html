@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Object Creation in Java Script
+        const Student = {
+            fullname:"Satyam Sagar",
+            marks:20,
+            printmarks:function(){
+                console.log("Marks",Student.marks);
+            }
+        };
+
+        Student.printmarks() */
+
+        /* Prototype in java script
+        const Employee = {
+            calctax:function(){
+                console.log("Tax is 10%")
+            }
+        };
+
+        const Karan = {
+            salary:1000
+        };
+
+        Karan.__proto__ = Employee; */
+
+
+        /*     Classes in Java Script
+        class Toyotacar{
+            constructor(brand,mileage){
+                console.log("Creating a Constructor");
+                this.brand = brand
+                this.mileage = mileage
+            }
+            start(){
+                console.log("Start");
+            }
+
+            stop(){
+                console.log("Stop")
+            }
+        }
+
+        let fortuner = new Toyotacar("fortuner",200);
+        console.log(fortuner); */
+
+        class Parent{
+            eat(){
+                console.log("Khana Kana");
+            }
+
+            sleep(){
+                console.log("Sona");
+            }
+
+
+        }
+
+        class Child extends Parent{
+            work(){
+                console.log("Kam Karna");
+            }
+        }
+
+        let fobj = new Child();
+        fobj.eat();
+        fobj.sleep();
+        fobj.work();
+    </script>
+</body>
+</html>

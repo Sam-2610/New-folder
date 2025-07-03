@@ -1,0 +1,20 @@
+<!-- Calculate 1 month after today and display in the same format as 15a. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day.js Example</title>
+  <!-- Day.js CDN -->
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+</head>
+<body>
+  <script>
+    const today = dayjs();
+    const updatedDate = today.add(1, 'month'); 
+
+    console.log("Today:", today.format('YYYY-MM-DD'));
+    console.log("Updated:", updatedDate.format('MMM D'));
+  </script>
+</body>
+</html>
