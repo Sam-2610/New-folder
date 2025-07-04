@@ -1,0 +1,36 @@
+<!--Let's practice OOP by creating a class that represents a car.
+• Create a new file data/car. js, and create a class car { }
+• Give the Car class 2 properties: brand and model. Then, create a
+constructor that sets these 2 properties.
+• Keep all properties public for now (we'll learn why in a later exercise).
+• Use this class to generate a few car objects:
+{ brand: 'Toyota' ,
+model: 'Corolla' }
+{ brand: 'Tesla', model: 'Model 3' }
+• console.log the car objects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Car {
+        constructor(brand, model) {
+            this.brand = brand;
+            this.model = model;
+        }
+    }
+
+    const C1 = new Car('Toyota', 'Corolla');
+    const C2 = new Car('Tesla', 'Model 3');
+
+    console.log(C1.brand + " : " + C1.model);
+    console.log(C2.brand + " : " + C2.model);
+</script>
+
+</body>
+</html>

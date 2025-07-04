@@ -1,0 +1,32 @@
+<!-- Add a method displayinfo() that console.logs S${brand}
+Run . displaylnfo( ) for each car, and check the console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Car {
+        constructor(brand, model) {
+            this.brand = brand;
+            this.model = model;
+        }
+
+        displayinfo(){
+            console.log(`${this.brand}${this.model}`);
+        }
+    }
+
+    const C1 = new Car('Toyota', 'Corolla');
+    const C2 = new Car('Tesla', 'Model 3');
+
+    C1.displayinfo();
+    C2.displayinfo();
+</script>
+
+</body>
+</html>

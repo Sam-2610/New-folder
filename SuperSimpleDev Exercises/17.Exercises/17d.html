@@ -1,0 +1,71 @@
+<!--Add isTrunkOpen property, which tracks if the car's trunk is open.
+• Should be a boolean property (true = open, false = closed).
+• Create openTrunk() and closeTrunk( ), which opens / closes the trunk.
+• openTrunk() should not work if the car is moving.
+• go() should not work if the trunk is open.
+Update displaylnfo( ) to display trunk info at the end. Try the code. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Class with Trunk</title>
+</head>
+<body>
+  <script>
+    class Car {
+      constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+        this.speed = 0;
+        this.isTrunkOpen = false;
+      }
+
+      go() {
+        if (this.isTrunkOpen) {
+          console.log("❌ Cannot move. Trunk is open.");
+        } else if (this.speed < 200) {
+          this.speed += 5;
+        }
+      }
+
+      brake() {
+        if (this.speed > 0) {
+          this.speed -= 5;
+        }
+      }
+
+      openTrunk() {
+        if (this.speed === 0) {
+          this.isTrunkOpen = true;
+        } else {
+          console.log("❌ Cannot open trunk while car is moving.");
+        }
+      }
+
+      closeTrunk() {
+        this.isTrunkOpen = false;
+      }
+
+      displayInfo() {
+        console.log(`${this.brand} ${this.model}, Speed: ${this.speed} km/h, Trunk Open: ${this.isTrunkOpen}`);
+      }
+    }
+
+    // Example usage
+    const car1 = new Car("Toyota", "Corolla");
+
+    car1.go(); // Speed: 5
+    car1.go(); // Speed: 10
+    car1.openTrunk(); // ❌ Cannot open trunk while car is moving.
+    car1.brake(); car1.brake(); // Speed back to 0
+    car1.openTrunk(); // ✅ Now it opens
+    car1.go(); // ❌ Cannot move. Trunk is open
+    car1.closeTrunk(); // ✅ Trunk closed
+    car1.go(); // ✅ Now it can move
+
+    car1.displayInfo();
+  </script>
+</body>
+</html>
