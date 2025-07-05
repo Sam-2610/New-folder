@@ -69,3 +69,27 @@ for i, item in enumerate(list1):
 list1 = [1,7,12,11,22,] 
 list2 = [i for item in list 1 if item > 8]
 
+# Lamda Functions
+
+sq = lambda x:x*x 
+print(sq)
+
+# Join Method
+
+a = ['apple','banana','mango']
+j = ",and,".join(a)
+print(j)
+
+# Format Method
+
+print("{} is a good {}".format("Sam","Boy"))
+print("{} is a good {0}".format("Sam","Boy"))
+
+# Filter
+
+def is_even(n):
+    return n % 2 == 0
+
+nums = list(range(10))
+even_nums = list(filter(is_even, nums))
+print(even_nums) 
