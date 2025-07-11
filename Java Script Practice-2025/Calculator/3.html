@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .calculator {
+        background-color: #ffffff;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 260px;
+      }
+
+      .display {
+        background-color: #f0f0f0;
+        border: none;
+        font-size: 28px;
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        color: #333;
+        text-align: right;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      button {
+        font-size: 20px;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        background-color: #1976d2;
+        transform: scale(1.05);
+      }
+
+      .equal {
+        background-color: #4caf50;
+      }
+
+      .equal:hover {
+        background-color: #388e3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+
+      <div class="buttons">
+        <button class="a">1</button>
+        <button class="b">2</button>
+        <button class="c">3</button>
+        <button class="d">4</button>
+        <button class="e">5</button>
+        <button class="s">+</button>
+        <button class="equal q" style="grid-column: span 3">=</button>
+      </div>
+    </div>
+
+    <script>
+      let Calculation = "";
+      const display = document.getElementById("display");
+
+      function updateDisplay() {
+        display.textContent = Calculation || "0";
+      }
+
+      document.querySelector(".a").addEventListener("click", () => {
+        Calculation += "1";
+        updateDisplay();
+      });
+
+      document.querySelector(".b").addEventListener("click", () => {
+        Calculation += "2";
+        updateDisplay();
+      });
+
+      document.querySelector(".c").addEventListener("click", () => {
+        Calculation += "3";
+        updateDisplay();
+      });
+
+      document.querySelector(".d").addEventListener("click", () => {
+        Calculation += "4";
+        updateDisplay();
+      });
+
+      document.querySelector(".e").addEventListener("click", () => {
+        Calculation += "5";
+        updateDisplay();
+      });
+
+      document.querySelector(".s").addEventListener("click", () => {
+        Calculation += "+";
+        updateDisplay();
+      });
+
+      document.querySelector(".q").addEventListener("click", () => {
+        try {
+          Calculation = eval(Calculation).toString();
+          updateDisplay();
+        } catch {
+          Calculation = "";
+          display.textContent = "Error";
+        }
+      });
+    </script>
+  </body>
+</html>

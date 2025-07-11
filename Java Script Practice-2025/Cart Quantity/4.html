@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #f4f4f4;
+      }
+
+      p {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 8px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .show {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .one,
+      .two,
+      .three {
+        background-color: #2196f3;
+        color: white;
+      }
+
+      .a,
+      .b {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .reset {
+        background-color: #9c27b0;
+        color: white;
+      }
+
+      button:hover {
+        opacity: 0.85;
+      }
+    </style>
+
+    <p>Responsive Cart</p>
+    <p>Maximum Quantity Allowed = 10</p>
+    <button class="show">Show Cart</button>
+    <button class="one">+1</button>
+    <button class="two">+2</button>
+    <button class="three">+3</button>
+    <button class="a">-1</button>
+    <button class="b">-2</button>
+    <button class="reset">Reset Cart</button>
+
+    <script>
+      let CartQuantity = 0;
+
+      document.querySelector(".show").addEventListener("click", () => {
+        console.log("Total Items Present in the Cart:", CartQuantity);
+      });
+
+      document.querySelector(".one").addEventListener("click", () => {
+        if (CartQuantity >= 10) {
+          alert("Maximum Limit Reached!");
+        } else {
+          CartQuantity += 1;
+          if (CartQuantity > 10) CartQuantity = 10;
+          console.log("1 item Added to the Cart!");
+        }
+      });
+
+      document.querySelector(".two").addEventListener("click", () => {
+        if (CartQuantity >= 10) {
+          alert("Maximum Quantity Reached!");
+        } else {
+          CartQuantity += 2;
+          if (CartQuantity > 10) CartQuantity = 10;
+          console.log("2 items Added to the Cart");
+        }
+      });
+
+      document.querySelector(".three").addEventListener("click", () => {
+        if (CartQuantity >= 10) {
+          alert("Maximum Quantity Reached!");
+        } else {
+          CartQuantity += 3;
+          if (CartQuantity > 10) CartQuantity = 10;
+          console.log("3 items Added to Your Cart");
+        }
+      });
+
+      document.querySelector(".a").addEventListener("click", () => {
+        if (CartQuantity <= 0) {
+          alert("No items Present in the Cart!");
+        } else {
+          CartQuantity -= 1;
+          if (CartQuantity < 0) CartQuantity = 0;
+          console.log("1 item Removed from Cart");
+        }
+      });
+
+      document.querySelector(".b").addEventListener("click", () => {
+        if (CartQuantity <= 0) {
+          alert("No items Present in the Cart!");
+        } else {
+          CartQuantity -= 2;
+          if (CartQuantity < 0) CartQuantity = 0;
+          console.log("2 items Removed from Cart");
+        }
+      });
+
+      document.querySelector(".reset").addEventListener("click", () => {
+        CartQuantity = 0;
+        console.log("Items Present in the Cart:", CartQuantity);
+        alert("Cart Quantity Has been Reset");
+      });
+    </script>
+  </body>
+</html>

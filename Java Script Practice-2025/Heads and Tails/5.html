@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Head and Tails</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: bold;
+        color: #2196f3;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .h {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .t {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .c {
+        background-color: #3f51b5;
+        color: white;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Your Choice: <span class="your-choice">None</span></p>
+    <p>Computer Choice: <span class="comp-choice">None</span></p>
+    <p>Your Score: <span class="your-score">0</span></p>
+    <p>Computer Score: <span class="comp-score">0</span></p>
+
+    <button class="h">Heads</button>
+    <button class="t">Tails</button>
+    <button class="c">Computer Choice</button>
+
+    <script>
+      let yourch = "";
+      let result = "";
+      let yourscr = 0;
+      let compscr = 0;
+
+      const yourChoiceDisplay = document.querySelector(".your-choice");
+      const compChoiceDisplay = document.querySelector(".comp-choice");
+      const yourScoreDisplay = document.querySelector(".your-score");
+      const compScoreDisplay = document.querySelector(".comp-score");
+
+      document.querySelector(".h").addEventListener("click", () => {
+        yourch = "Heads";
+        yourChoiceDisplay.innerText = yourch;
+        console.log("You chose Heads");
+      });
+
+      document.querySelector(".t").addEventListener("click", () => {
+        yourch = "Tails";
+        yourChoiceDisplay.innerText = yourch;
+        console.log("You chose Tails");
+      });
+
+      document.querySelector(".c").addEventListener("click", () => {
+        const comp = Math.random();
+        result = comp <= 0.5 ? "Heads" : "Tails";
+        compChoiceDisplay.innerText = result;
+        console.log("Computer chose:", result);
+
+        if (yourch === "") {
+          alert("Please choose Heads or Tails first!");
+          return;
+        }
+
+        if (yourch === result) {
+          yourscr++;
+          yourScoreDisplay.innerText = yourscr;
+          console.log("You Won!");
+          alert("You won! 🎉");
+        } else {
+          compscr++;
+          compScoreDisplay.innerText = compscr;
+          console.log("Computer Won!");
+          alert("Computer won! 😢");
+        }
+      });
+    </script>
+  </body>
+</html>
