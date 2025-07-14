@@ -1,6 +1,6 @@
 import math
 import statistics as s
-import random 
+import random as ran 
 
 
 x = 22.34
@@ -30,7 +30,7 @@ print(s.mode(l))
 
 # Random Module
 
-print(random.random())
-print(random.randint(1,5))
-print(random.randrange(1,5))
+print(ran.random())
+print(ran.randint(1,5))
+print(ran.randrange(1,5))
 
