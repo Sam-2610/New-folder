@@ -36,5 +36,5 @@ A simple, interactive coin toss game built with HTML, CSS, and JavaScript. You p
    git clone https://github.com/your-username/heads-or-tails.git
    ```
 
-👨‍💻 Author
+## 👨‍💻 Author
 Satyam Sagar
