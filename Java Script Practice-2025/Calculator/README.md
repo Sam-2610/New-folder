@@ -29,14 +29,8 @@ This project demonstrates basic DOM manipulation, event handling, and UI styling
 
 ---
 
-## 🛠️ How to Run
 
-1. **Clone or Download** the repository:
-
-```bash
-git clone https://github.com/your-username/js-calculator.git
-
-👨‍💻 Author
+## 👨‍💻 Author
 Satyam Sagar
 
-```
+

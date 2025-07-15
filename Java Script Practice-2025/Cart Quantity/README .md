@@ -28,5 +28,5 @@ A simple and interactive JavaScript project to simulate cart item management, al
 
 ---
 
-📌 Author
+## 📌 Author
 Satyam Sagar
