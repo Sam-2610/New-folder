@@ -60,6 +60,17 @@ const quizQuestions = [
       { text: "Ag", correct: false },
     ],
   },
+  
+    {
+    question: "Who wrote the play 'Romeo and Juliet'?",
+    answers: [
+      { text: "William Shakespeare", correct: true },
+      { text: "Mark Twain", correct: false },
+      { text: "Jane Austen", correct: false },
+      { text: "Charles Dickens", correct: false },
+    ],
+  },
+  
 ];
 
 // QUIZ STATE VARS
