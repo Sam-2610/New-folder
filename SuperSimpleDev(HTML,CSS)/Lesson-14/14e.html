@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        min-height: 200vh;
+    }
+    .container{
+        display: flex;
+        
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0px 0px 5px 0px black;
+        
+    }
+
+    .container1{
+        
+        display: flex;
+        
+        
+    }
+    .container2{
+        
+
+        margin-left: 73%;
+        
+    }
+    img{
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+    .name{
+        padding-left: 6px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .add{
+        padding:10px 10px;
+        margin-right: 20px;
+        margin-top: 5px;
+        color: white;
+        background-color: rgb(78, 78, 187);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        vertical-align: middle;
+        font-weight: bold;
+       
+    }
+
+    .message{
+        padding:10px 10px;
+        margin-right: 20px;
+        margin-top: 5px;
+        color: black;
+        background-color: rgb(211, 191, 191);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        vertical-align: middle;
+        font-weight: bold;
+        
+    }
+
+</style>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="container1">
+                <img src="/cat.jpg" alt="">
+                <p class="name">Oliver Cat</p>
+            </div>
+            <div class="container2">
+                <button class="add">Add Friend</button>
+                <button class="message">Message</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
