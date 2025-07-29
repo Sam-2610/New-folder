@@ -5,7 +5,7 @@
 ## 🚀 About Me
 
 - 💻 Currently exploring Python, Java, and Web Development
-- 📚 Studying Computer Applications (BCA)
+- 📚 Studying Information Technology (BSc IT)
 - 🔨 Building small projects in JavaScript, Python, and HTML/CSS
 - 🌐 Interested in Front-End Development, Automation, and Open Source
 
@@ -22,10 +22,10 @@
 
 ## 📫 Connect With Me
 
-- 📧 Email: satyamsagar827@gmail.com 
+- 📧 Email: satyamsagar827@gmail.com
 - 🌐 LinkedIn: Not Yet..
 - 📝 Portfolio: Coming soon...
 
 ---
 
-*Thanks for visiting my profile! Let's build something awesome together! 🚀*
+_Thanks for visiting my profile! Let's build something awesome together! 🚀_
