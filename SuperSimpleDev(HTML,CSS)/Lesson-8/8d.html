@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    button{
-        display: block;
-        width: 74%;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .name-fields {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
         padding: 10px;
-        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .email {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
         background-color: rgb(22, 88, 211);
-        cursor: pointer;
-        border: none;
         color: white;
+        border: none;
         border-radius: 10px;
         font-weight: bold;
-    }
+        cursor: pointer;
+      }
 
-    .first{
-        display: inline-block;
-        margin-bottom: 10px;
-        padding:5px;
-        border-radius: 5px;
-        
-        
-    }
-
-    .second{
-        display: inline-block;
-        margin-bottom: 10px;
-        padding:5px;
-        border-radius: 5px;
-        
-    }
-
-    .email{
-        display: block;
-        width: 70%;
-        padding: 5px;
-        border-radius: 5px;
-    }
-</style>
-<body>
+      button:hover {
+        background-color: rgb(18, 72, 173);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <input type="text" class="first" placeholder="First Name">
-        <input type="text" class="second" placeholder="Last Name">
-        <input type="text" class="email" placeholder="Email">
-        <button>Sign Up</button>
+      <div class="name-fields">
+        <input type="text" class="first" placeholder="First Name" />
+        <input type="text" class="second" placeholder="Last Name" />
+      </div>
+      <input type="text" class="email" placeholder="Email" />
+      <button>Sign Up</button>
     </div>
-</body>
+  </body>
 </html>

@@ -1,34 +1,39 @@
-<!-- font = Arial -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    body{
+    <style>
+      body {
         font-family: Arial, Helvetica, sans-serif;
-        
-        
-    }
-    .first,h1{
-       text-align: center;
-    }
+      }
 
-    .second,h3{
+      h1,
+      h3 {
         text-align: center;
-    }
+        margin: 0;
+      }
 
-    .link,a{
+      .link {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .link a {
         text-decoration: none;
-        text-align:center ;
-    }
-</style>
-<body>
-    <p class="first"><h1>Shooping for your business?</h1></p>
-    <p class="second"><h3>See how Apple at Work can help.</h3></p>
-    <p class="link"><a href="#">Learn More ></a></p>
-</body>
+        color: #0071e3;
+        font-weight: bold;
+      }
+
+      .link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shopping for your business?</h1>
+    <h3>See how Apple at Work can help.</h3>
+    <div class="link"><a href="#">Learn More &gt;</a></div>
+  </body>
 </html>
