@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .side1{
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .side1 {
         background-color: rgb(56, 49, 49);
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         width: 60px;
-    }
-    img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      img {
         height: 50px;
         width: 50px;
         object-fit: cover;
         object-position: center;
         border-radius: 50%;
         margin-top: 20px;
-    }
+      }
 
-    .side2{
-        margin-left: 8%;
+      .side2 {
+        margin-left: 60px;
         background-color: rgb(72, 79, 82);
         position: fixed;
-        width: 30%;
+        width: 300px;
         top: 0;
         bottom: 0;
-    }
+        display: flex;
+        flex-direction: column;
+      }
 
-    .box2{
+      .box2 {
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
         color: gray;
-        height: 20px;
         font-weight: bold;
-       
-    }
+      }
 
-    .info,.sign{
-        margin-top: 8px;
-    }
-
-    .box3{
-        
-       color: white;
-        width: 100%;
+      .box3 {
         padding: 25px;
-        font-family: Arial, Helvetica, sans-serif;
+        color: white;
         font-size: 18px;
-       
-        left: 35px;
-        width: 20%;
-      
-        position: fixed;
-        top: 15px;
-        
-    }
+      }
 
-    li{
-        margin-top: 10px;
-        
-    }
-</style>
-<body>
-    <div class="box">
-        <div class="side1">
-            <img src="/cat.jpg" alt="">
-            <img src="/cat2.jpg" alt="">
-            <img src="/dog.jpg" alt="">
-        </div>
-        <div class="side2">
-            <div class="box2">
-                <p class="info">INFO</p>
-                <p class="sign">+</p>
-            </div>
-            <div class="box3">
-                <ul>
-                <li>new-video</li>
-                <li>updates</li>
-                <li>tag</li>
-                </ul>
-            </div>
-            
-            
-        </div>
+      li {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="side1">
+      <img src="/cat.jpg" alt="" />
+      <img src="/cat2.jpg" alt="" />
+      <img src="/dog.jpg" alt="" />
     </div>
-</body>
+
+    <div class="side2">
+      <div class="box2">
+        <p class="info">INFO</p>
+        <p class="sign">+</p>
+      </div>
+      <div class="box3">
+        <ul>
+          <li>new-video</li>
+          <li>updates</li>
+          <li>tag</li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

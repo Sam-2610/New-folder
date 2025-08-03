@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .container{
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout</title>
+    <style>
+      .container {
         display: flex;
         flex-direction: row;
-        
-    }
-    .one{
+      }
+
+      .one {
         background-color: lightpink;
         height: 80px;
         width: 200px;
-        
-        
-        
-        
-        
-    }
+      }
 
-    .two{
+      .two {
         background-color: lightblue;
         height: 80px;
-        width: 200px;
         flex: 1;
-        
-        
-        
-        flex-direction: row;
-       
-    }
+        display: flex; /* Add this line to align items in row */
+        align-items: center;
+        justify-content: space-between; /* Distribute content evenly */
+        padding: 0 10px;
+      }
 
-    .it{
-       
+      .item,
+      .it,
+      .i {
         background-color: black;
         color: white;
-       
-        display:inline-block;
-        
-    }
-
-    .i{
-        display: inline-block;
-        background-color: black;
-        color: white;
-        margin-left: 80%;
-    }
-
-</style>
-<body>
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="one"></div>
-        <div class="two">
-            <div class="item">
-                row1
-            </div>
-            <div class="it">row2</div>
-            <div class="i">row2</div>
-        </div>
+      <div class="one"></div>
+      <div class="two">
+        <div class="item">row1</div>
+        <div class="it">row2</div>
+        <div class="i">row3</div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
