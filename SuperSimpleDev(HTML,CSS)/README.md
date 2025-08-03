@@ -28,6 +28,6 @@ This repository contains my personal practice projects for learning and improvin
 
 ## Author
 
-Satyam Sagar
+-- Satyam Sagar
 
 ## 💡 Feel free to explore the folders and files. Feedback and suggestions are always welcome!
