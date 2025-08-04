@@ -1,6 +1,5 @@
-<!-- 1a. Using React, display a button on the website with the text
-"Good job!" inside the button.
-Good job! -->
+<!-- c. Create the design on the right and display it on the
+website using React. -->
 
 <!DOCTYPE html>
 <html>
@@ -15,9 +14,16 @@ Good job! -->
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const button = <button>Good Job</button>;
+      const div = (
+        <div>
+          <p>Cotton Socks</p>
+          <p>Price $10</p>
+          <button>Add to Cart</button>
+        </div>
+      );
+
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(div);
     </script>
   </body>
 </html>

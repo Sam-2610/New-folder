@@ -1,6 +1,5 @@
-<!-- 1a. Using React, display a button on the website with the text
-"Good job!" inside the button.
-Good job! -->
+<!-- lb. Using React, display a paragraph with the text "My name is [NAME]"
+on the website (replace [NAME] with your name). -->
 
 <!DOCTYPE html>
 <html>
@@ -15,9 +14,9 @@ Good job! -->
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const button = <button>Good Job</button>;
+      const paragraph = <p> My Name is Sam.</p>;
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(paragraph);
     </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-<!-- 1a. Using React, display a button on the website with the text
-"Good job!" inside the button.
-Good job! -->
+<!-- lh. Continuing from lg, insert the date in a paragraph element, and
+display it on the website in this format:
+Today is August 28 -->
 
 <!DOCTYPE html>
 <html>
@@ -9,15 +9,15 @@ Good job! -->
   </head>
   <body>
     <div class="js-container"></div>
-
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const button = <button>Good Job</button>;
+      const today = dayjs().format("MMMM D");
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(<p>Today is {today}</p>);
     </script>
   </body>
 </html>

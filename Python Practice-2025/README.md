@@ -58,3 +58,7 @@ The goal is to build strong problem-solving skills and gain confidence in core P
 - Bytes to string and vice versa
 
 ---
+
+## Author
+
+- Satyam Sagar

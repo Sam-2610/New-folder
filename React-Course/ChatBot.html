@@ -1,11 +1,7 @@
-<!-- 1a. Using React, display a button on the website with the text
-"Good job!" inside the button.
-Good job! -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>React Basics</title>
+    <title>Chat Bot</title>
   </head>
   <body>
     <div class="js-container"></div>
@@ -15,9 +11,19 @@ Good job! -->
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const button = <button>Good Job</button>;
+      function ChatInput() {
+        return (
+          <div>
+            <input type="text" placeholder="Type your message here..." />
+            <button>Send</button>
+          </div>
+        );
+      }
+
+      const div = <div>{ChatInput()}</div>;
+
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(div);
     </script>
   </body>
 </html>

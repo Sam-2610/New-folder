@@ -1,0 +1,42 @@
+<!-- If. Continuing from Ie, let's pretend the shipping cost is $5. Save this in a
+variable named shippingCost, calculate the total cost using JavaScrip
+(productcost + shippingcost), and display the results on the website
+using the design below:
+Product cost: $--A—
+Shipping cost: $--B—
+Total cost: $--C—
+Note: replace A and insert productcost,
+replace B and insert shippingCost,
+replace C and insert the total cost. -->
+
+!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const socks = 10;
+      const T_shirt = 16;
+      const productcost = socks + T_shirt;
+      const shippingCost = 5;
+      const totalCost = productcost + shippingCost;
+      const div = (
+        <div>
+          <p>Product Cost = ${productcost}</p>
+          <p>Shipping Cost = ${shippingCost}</p>
+          <p>Total Cost = ${totalCost}</p>
+        </div>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
-<!-- 1a. Using React, display a button on the website with the text
-"Good job!" inside the button.
-Good job! -->
+<!-- 1d. You buy 1 pack Of socks for $10 and 2 T-shirts for $8 each. using
+JavaScript, calculate the total cost of this order, save it in a
+variable named productcost, and display it in the Console. -->
 
 <!DOCTYPE html>
 <html>
@@ -15,9 +15,14 @@ Good job! -->
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const button = <button>Good Job</button>;
+      const socks = 10;
+      const T_shirt = 16;
+      const productcost = socks + T_shirt;
+      console.log(productcost);
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(
+        "Welcome to SuperSimpleDev React Course"
+      );
     </script>
   </body>
 </html>
