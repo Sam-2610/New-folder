@@ -1,0 +1,35 @@
+<!-- 2b. Continuing from 2a, in the <App> component, add 2 buttons after
+the paragraph: "Login" and "Sign up"
+- Use a Fragment to group them together
+- use ( ) to write the JSX on multiple lines
+Hello, welcome to my website
+Login Sign up
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function App() {
+        return (
+          <>
+            <p>Hello,Welcome to My Website</p>
+            <button>Login</button>
+            <button>Sign Up</button>
+          </>
+        );
+      }
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

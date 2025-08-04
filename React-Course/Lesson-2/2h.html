@@ -1,0 +1,55 @@
+<!-- 2h. If a product has a discountprice also cross out the original price.
+- To cross out text, surround it with the element:
+- Don't cross out the original price if there's no
+discount. To check if discountprice does not exist,
+use ! discountprice
+- There are several ways to do this exercise. As long
+as you get the final result, you're good!
+Cotton socks
+Discount price: $5.45
+Add to Cart 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function Product({ name, price, discount }) {
+        return (
+          <>
+            <p>{name}</p>
+            {discount && (
+              <del>
+                <p>Price: ${price}</p>
+              </del>
+            )}
+            {discount && <p>Discount: ${discount}</p>}
+            {!discount && <p>Price: ${price}</p>}
+
+            <button>Add to Cart</button>
+          </>
+        );
+      }
+      function App() {
+        return (
+          <>
+            <Product name="Cotton Socks" price={10} discount={5.45} />
+            <Product name="Tennis Balls" price={5} />
+            <Product name="Plain T-shirt" price={7.99} />
+          </>
+        );
+      }
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

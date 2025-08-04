@@ -1,0 +1,48 @@
+<!-- 2g. Continuing from 2f, some products can have
+a discount. Add a prop to <ProductDetai1s>
+called discountPrice. If discountPrice exists,
+display it under the original price.
+- Give the socks product a discount price of $5.45
+Cotton socks
+Price: $10.90
+Discount price: $5.45
+Add to Cart 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function Product({ name, price, discount }) {
+        return (
+          <>
+            <p>{name}</p>
+            <p>Price: ${price}</p>
+            {discount && <p>Discount: ${discount}</p>}
+            <button>Add to Cart</button>
+          </>
+        );
+      }
+      function App() {
+        return (
+          <>
+            <Product name="Cotton Socks" price={10} discount={5.45} />
+            <Product name="Tennis Balls" price={5} />
+            <Product name="Plain T-shirt" price={7.99} />
+          </>
+        );
+      }
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

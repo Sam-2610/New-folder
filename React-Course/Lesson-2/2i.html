@@ -1,0 +1,75 @@
+<!-- 2j. We'll add an image at the top of each Product. In your browser, go to
+with cotton—socks . png,
+(replace
+supersimple . dev/ images/
+tennis—balls .png, and plain—t—shirt .png). Download the images.
+- In add an <img> at the top, and add a prop called
+imagesrc. Give the the attribute (this sets the
+src attribute to the value of the imagesrc prop).
+- Then in give each a prop imagesrc="
+with the file name of the image, like cotton-socks . png)
+(replace
+supersimple . dev/ images/
+with
+../images/
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function Product({ name, price, discount, imgsrc }) {
+        return (
+          <>
+            <p>{name}</p>
+            <img src={imgsrc} alt={name} width="50" />
+
+            {!discount ? (
+              <p>Price: ${price}</p>
+            ) : (
+              <del>
+                <p>Price: ${price}</p>
+              </del>
+            )}
+            {discount && <p>Discount: ${discount}</p>}
+
+            <button>Add to Cart</button>
+          </>
+        );
+      }
+      function App() {
+        return (
+          <>
+            <Product
+              name="Cotton Socks"
+              price={10}
+              discount={5.45}
+              imgsrc="../cotton-socks.png"
+            />
+            <Product
+              name="Tennis Balls"
+              price={5}
+              imgsrc="../tennis-balls.png"
+            />
+            <Product
+              name="Plain T-shirt"
+              price={7.99}
+              imgsrc="../plain-t-shirt.png"
+            />
+          </>
+        );
+      }
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
