@@ -9,7 +9,7 @@ Note: replace A and insert productcost,
 replace B and insert shippingCost,
 replace C and insert the total cost. -->
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>React Basics</title>
@@ -19,24 +19,26 @@ replace C and insert the total cost. -->
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
     <script type="text/babel">
       const socks = 10;
       const T_shirt = 16;
-      const productcost = socks + T_shirt;
+      const productCost = socks + T_shirt;
       const shippingCost = 5;
-      const totalCost = productcost + shippingCost;
+      const totalCost = productCost + shippingCost;
+
       const div = (
         <div>
-          <p>Product Cost = ${productcost}</p>
-          <p>Shipping Cost = ${shippingCost}</p>
-          <p>Total Cost = ${totalCost}</p>
+          <p>Product cost: ${productCost}</p>
+          <p>Shipping cost: ${shippingCost}</p>
+          <p>Total cost: ${totalCost}</p>
         </div>
       );
 
       const container = document.querySelector(".js-container");
-      ReactDOM.createRoot(container).render(div);
+      const root = ReactDOM.createRoot(container);
+      root.render(div);
     </script>
   </body>
 </html>
