@@ -12,8 +12,21 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
       function ChatInput() {
+        const [inputValue, setInputValue] = React.useState("");
         function saveInput(event) {
-          console.log(event.target.value);
+          setInputValue(event.target.value);
+        }
+
+        function setMessage() {
+          setInputValue(event.target.value);
+          setMessage([
+            ...ChatMessages,
+            {
+              message: "Hello! How can I help you?",
+              sender: "Robot",
+              id: crypto.randomUUID(),
+            },
+          ]);
         }
         return (
           <>
@@ -23,7 +36,7 @@
               size="30"
               onChange={saveInput}
             />
-            <button>Send</button>
+            <button onClick={setMessage}>Send</button>
           </>
         );
       }
@@ -66,19 +79,9 @@
         ]);
         //const [chatMessage,setMessage] = ChatMessages;
 
-        function hello() {
-          setMessage([
-            ...ChatMessages,
-            {
-              message: "Hello! How can I help you?",
-              sender: "Robot",
-              id: crypto.randomUUID(),
-            },
-          ]);
-        }
+        function hello() {}
         return (
           <>
-            <button onClick={hello}>Send</button>
             <ChatInput />
             {ChatMessages.map((msg, index) => (
               <ChatMessage
