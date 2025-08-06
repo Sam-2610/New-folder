@@ -1,0 +1,48 @@
+<!-- 3d. Separate the counter into a component. Then, use this component to
+create 2 counters on the website. Click both counters a few times to
+test it. Notice, each counter can have a different count. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      function App() {
+        const [count, setcount] = React.useState(0);
+
+        function clicked() {
+          setcount(count + 1);
+          console.log(`Clicked ${count} times!`);
+        }
+
+        return (
+          <div>
+            <button onClick={clicked}>Clicked {count} times!</button>
+          </div>
+        );
+      }
+
+      function Newapp() {
+        return (
+          <div>
+            <App />
+            <App />
+          </div>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+
+      ReactDOM.createRoot(container).render(<Newapp />);
+    </script>
+  </body>
+</html>

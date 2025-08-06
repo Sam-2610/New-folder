@@ -1,0 +1,47 @@
+<!-- 3e. Make both counters display the same count. You can do this by lifting
+the state up, and sharing it between the counters. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      // Counter component uses shared count and setCount
+      function Counter({ count, setCount }) {
+        function handleClick() {
+          setCount(count + 1);
+        }
+
+        return (
+          <div>
+            <button onClick={handleClick}>Clicked {count} times!</button>
+          </div>
+        );
+      }
+
+      // App holds ONE shared state for both counters
+      function App() {
+        const [count, setCount] = React.useState(0);
+
+        return (
+          <div>
+            <Counter count={count} setCount={setCount} />
+            <Counter count={count} setCount={setCount} />
+          </div>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

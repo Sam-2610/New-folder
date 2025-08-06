@@ -1,0 +1,33 @@
+<!-- 3a. Create a button with the text "Clicked O times". When you click this
+button, display "Clicked" in the console. (Hint: use onClick) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function button() {
+        console.log("Clicked!");
+      }
+
+      const click = (
+        <>
+          <button onClick={button} class="js-button">
+            Click Me!
+          </button>
+        </>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(click);
+    </script>
+  </body>
+</html>
