@@ -12,12 +12,16 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
       function ChatInput() {
+        function saveInput(event) {
+          console.log(event.target.value);
+        }
         return (
           <>
             <input
               type="text"
               placeholder="Type your message here..."
               size="30"
+              onChange={saveInput}
             />
             <button>Send</button>
           </>
@@ -38,13 +42,51 @@
       }
 
       function App() {
+        const [ChatMessages, setChatMessages] = React.useState([
+          {
+            message: "Hello Chatbot",
+            sender: "user",
+            id: crypto.randomUUID(),
+          },
+          {
+            message: "Hello! How can I help you?",
+            sender: "Robot",
+            id: crypto.randomUUID(),
+          },
+          {
+            message: "flip a coin",
+            sender: "user",
+            id: crypto.randomUUID(),
+          },
+          {
+            message: "Sure! You got tails",
+            sender: "Robot",
+            id: crypto.randomUUID(),
+          },
+        ]);
+        //const [chatMessage,setMessage] = ChatMessages;
+
+        function hello() {
+          setMessage([
+            ...ChatMessages,
+            {
+              message: "Hello! How can I help you?",
+              sender: "Robot",
+              id: crypto.randomUUID(),
+            },
+          ]);
+        }
         return (
           <>
+            <button onClick={hello}>Send</button>
             <ChatInput />
-            <ChatMessage message="Hello Chatbot" sender="user" />
-            <ChatMessage message="Hello! How can I help you?" sender="Robot" />
-            <ChatMessage message="flip a coin" sender="user" />
-            <ChatMessage message=" Sure! You got tails" sender="Robot" />
+            {ChatMessages.map((msg, index) => (
+              <ChatMessage
+                key={index}
+                message={msg.message}
+                sender={msg.sender}
+              />
+            ))}
           </>
         );
       }
