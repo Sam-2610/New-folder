@@ -6,13 +6,13 @@
 
 - 🎛 Adjustable password length (6–24 characters)
 
-## 🔠 Toggle options for:
+## 🔁 Toggle options for:
 
-- Uppercase letters
+- 🔠 Uppercase letters
 
-- Lowercase letters
+- 🔡 Lowercase letters
 
-- Numbers
+- 🔢 Numbers
 
 ## 👌 Symbols
 
