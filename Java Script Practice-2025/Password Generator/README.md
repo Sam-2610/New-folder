@@ -14,9 +14,10 @@
 
 - Numbers
 
-## Symbols
+## 👌 Symbols
 
 - 🔍 Real-time password strength meter
+
 - 📋 One-click copy to clipboard
 
 - 📱 Fully responsive design
@@ -25,7 +26,7 @@
 
 - 🧪 Password Strength Logic
 
-## The strength meter scores your password based on:
+## 👉 The strength meter scores your password based on:
 
 - Length
 
@@ -33,7 +34,7 @@
 
 - Applies penalties for short passwords
 
-## Three levels of strength are indicated:
+## 💪 Three levels of strength are indicated:
 
 - Weak (🔴 Red bar)
 
