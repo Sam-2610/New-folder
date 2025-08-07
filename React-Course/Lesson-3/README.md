@@ -65,7 +65,6 @@ Each task builds on the previous one to gradually introduce key ideas in React.
 Practiced:
 
 - Component reusability
-
 - Understanding state isolation per component instance
 
 ## ✅ 3e - Synchronized Counters (Lifting State Up)
@@ -79,7 +78,6 @@ Practiced:
 Practiced:
 
 - Lifting state up
-
 - State sharing across components using props
 
 ## ✅ 3f - Refactoring Counter into Separate Component
@@ -93,7 +91,6 @@ Practiced:
 Practiced:
 
 - Component decomposition
-
 - Prop drilling and modular React structure
 
 ## 🛠️ Technologies Used
