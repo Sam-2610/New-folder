@@ -1,0 +1,53 @@
+<!-- 3h. Add 2 buttons beside the "Reset" and "Example".
+When clicking the Reset button, it removes the text in the
+• When clicking the Example button, it sets an example text in the
+like "Alice" (or any name you want). 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [inputText, setInputText] = React.useState("");
+
+        function example() {
+          setInputText("Sam");
+        }
+
+        function reset() {
+          setInputText("");
+        }
+
+        function saveInputText(event) {
+          setInputText(event.target.value);
+        }
+
+        return (
+          <>
+            <input
+              onChange={saveInputText}
+              placeholder="Type a name here"
+              value={inputText}
+            />
+            <p>Hello {inputText}</p>
+            <button onClick={reset}>Reset</button>
+            <button onClick={example}>Try it!</button>
+          </>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
