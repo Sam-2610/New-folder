@@ -1,0 +1,64 @@
+<!-- 4h. Create the counter app below (you can use the code for exercise 3c
+as a starting point or start from an empty React website).
+• Note: do not put the counter in a separate component for now.
+• Create a "Reset" button that resets the count to O.
+• Create an "Auto Click" button. When clicked, your code will click
+the counter every second (use setlnterval). To click a button with
+code, first save the button element in your JavaScript (use useRef).
+Once you have the button element, run buttonE1em. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics - 4h Counter App</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      function App() {
+        const [count, setCount] = React.useState(0);
+        const buttonRef = React.useRef(null);
+        const intervalRef = React.useRef(null);
+
+        function handleClick() {
+          setCount((prev) => prev + 1);
+        }
+
+        function handleReset() {
+          setCount(0);
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+
+        function handleAutoClick() {
+          if (intervalRef.current === null) {
+            intervalRef.current = setInterval(() => {
+              if (buttonRef.current) {
+                buttonRef.current.click();
+              }
+            }, 1000);
+          }
+        }
+
+        return (
+          <div>
+            <button ref={buttonRef} onClick={handleClick}>
+              Count: {count}
+            </button>
+            <button onClick={handleReset}>Reset</button>
+            <button onClick={handleAutoClick}>Auto Click</button>
+          </div>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- 4f. We'll create the clock from lesson 1 exercises using hooks:
+• First, load the DayJS external library:
+Current time: 22: 10:49
+https : //unpkg.com/supersimpledev/dayj s . j s
+• Using React . useState() save a string time. To get the current
+time as a string, you can use dayjs() . format( 'HH:mm: ss )
+• Using React . useEffect() run this code once after the component
+is created: { } , 1000) (this code runs a
+function every 1000 milliseconds or 1 second).
+• In the function that we give to setlnterval, get the time again
+using dayjs() . format( ' HH:mm: ss ) and update the State. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+
+        React.useEffect(() => {
+          setInterval(() => {
+            setTime(dayjs().format("HH:mm:ss"));
+          }, 1000);
+
+          // Important: make sure to give React.useEffect()
+          // a dependency array of [] so it only runs once!
+        }, []);
+
+        return <p>Current time: {time}</p>;
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

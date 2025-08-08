@@ -1,0 +1,90 @@
+<!-- 4i. Style the counter using this design:
+• Background color: rgb(25, 135, 84)
+• To center the buttons horizontally, put
+the buttons in a flexbox and use
+Auto Click
+justify—content: center;
+• To center the buttons vertically, first,
+make the flexbox the same height as
+the browser (use height: 100vh;)
+• Add background-color: rgb(222, 222, 222); to the flexbox. Notice
+the default margin Of 8px around the element. Remove this
+default margin from the top and bottom.
+• Now that the flexbox is the same height as the browser, center the elements vertically using align-items : center -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics - 4h Counter App</title>
+  </head>
+  <style>
+    body {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    button {
+      background-color: rgb(25, 135, 84);
+      padding: 10px 10px;
+      color: white;
+      border: none;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgb(222, 222, 222);
+      align-items: center;
+    }
+  </style>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      function App() {
+        const [count, setCount] = React.useState(0);
+        const buttonRef = React.useRef(null);
+        const intervalRef = React.useRef(null);
+
+        function handleClick() {
+          setCount((prev) => prev + 1);
+        }
+
+        function handleReset() {
+          setCount(0);
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+
+        function handleAutoClick() {
+          if (intervalRef.current === null) {
+            intervalRef.current = setInterval(() => {
+              if (buttonRef.current) {
+                buttonRef.current.click();
+              }
+            }, 1000);
+          }
+        }
+
+        return (
+          <div className="container">
+            <button ref={buttonRef} onClick={handleClick}>
+              Count: {count}
+            </button>
+            <button onClick={handleReset}>Reset</button>
+            <button onClick={handleAutoClick}>Auto Click</button>
+          </div>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
