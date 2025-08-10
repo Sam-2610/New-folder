@@ -22,27 +22,29 @@ Add to Cart
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
     <script type="text/babel">
       function Product({ name, price }) {
         return (
           <>
             <p>{name}</p>
-            <p>Price: ${price}</p>
+            <p>Price: {price !== undefined ? `$${price}` : ""}</p>
             <button>Add to Cart</button>
           </>
         );
       }
+
       function App() {
         return (
           <>
-            <Product name="Cotton Socks" price={10} />
-            <Product name="Tennis Balls" price={5} />
+            <Product name="Cotton socks" price={10.9} />
+            <Product name="Tennis balls" />
             <Product name="Plain T-shirt" price={7.99} />
           </>
         );
       }
+
       const container = document.querySelector(".js-container");
       ReactDOM.createRoot(container).render(<App />);
     </script>

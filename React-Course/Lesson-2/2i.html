@@ -1,4 +1,4 @@
-<!-- 2j. We'll add an image at the top of each Product. In your browser, go to
+<!-- 2i. We'll add an image at the top of each Product. In your browser, go to
 with cotton—socks . png,
 (replace
 supersimple . dev/ images/
@@ -24,50 +24,48 @@ with
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
     <script type="text/babel">
-      function Product({ name, price, discount, imgsrc }) {
+      function Product({ name, price, discountPrice, imageSrc }) {
         return (
           <>
+            <img src={imageSrc} alt={name} width="100" />
             <p>{name}</p>
-            <img src={imgsrc} alt={name} width="50" />
-
-            {!discount ? (
-              <p>Price: ${price}</p>
+            {discountPrice ? (
+              <>
+                <p>
+                  Price: <del>${price}</del>
+                </p>
+                <p>Discount price: ${discountPrice}</p>
+              </>
             ) : (
-              <del>
-                <p>Price: ${price}</p>
-              </del>
+              price && <p>Price: ${price}</p>
             )}
-            {discount && <p>Discount: ${discount}</p>}
-
             <button>Add to Cart</button>
           </>
         );
       }
+
       function App() {
         return (
           <>
             <Product
-              name="Cotton Socks"
-              price={10}
-              discount={5.45}
-              imgsrc="../cotton-socks.png"
+              name="Cotton socks"
+              price={10.9}
+              discountPrice={5.45}
+              imageSrc="../cotton-socks.png"
             />
-            <Product
-              name="Tennis Balls"
-              price={5}
-              imgsrc="../tennis-balls.png"
-            />
+            <Product name="Tennis balls" imageSrc="../tennis—balls.png" />
             <Product
               name="Plain T-shirt"
               price={7.99}
-              imgsrc="../plain-t-shirt.png"
+              imageSrc="../plain—t—shirt.png"
             />
           </>
         );
       }
+
       const container = document.querySelector(".js-container");
       ReactDOM.createRoot(container).render(<App />);
     </script>
