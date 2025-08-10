@@ -11,7 +11,7 @@ All examples use the `react.js`, `react-dom.js`, and `babel.js` setup from **Sup
 
 **Code:**
 
-````jsx
+`````jsx
 function App() {
   return (
     <>
@@ -31,6 +31,8 @@ Key Concepts:
 
 - Using ReactDOM.createRoot().
 
+---
+
 ## 2️⃣ Exercise 2 — E-commerce Product (Socks Example)
 
 **Goal:** Display product details and an "Add to Cart" button.
@@ -43,8 +45,7 @@ Price: $10.90
 
 **Code:**
 
-```jsx
-
+````jsx
 function App() {
   return (
     <>
@@ -67,14 +68,15 @@ Key Concepts:
 
 - Simple UI structure for product display.
 
-### 3️⃣ Exercise 3 — Personalized Greeting
+---
+
+## 3️⃣ Exercise 3 — Personalized Greeting
 
 **Goal:** Render a personalized greeting message.
 
 **Code:**
 
-```jsx
-
+````jsx
 function App() {
   const name = "John";
   return (
@@ -93,13 +95,15 @@ Key Concepts:
 
 - Dynamic rendering based on variables.
 
-4️⃣ Exercise 4 — Props Usage
+---
+
+## 4️⃣ Exercise 4 — Props Usage
 
 **Goal:** Create a component that accepts title and price as props.
 
 **Code:**
 
-```jsx
+````jsx
 function Product(props) {
   return (
     <>
@@ -123,6 +127,8 @@ Key Concepts:
 
 - Reusable components.
 
+---
+
 
 ## 🎯 Learning Outcomes
 
@@ -136,6 +142,8 @@ Key Concepts:
 
 - Structuring UI components.
 
+---
+
 ## 👨‍💻 Author
 
 Satyam Sagar
@@ -145,4 +153,4 @@ Satyam Sagar
 
 
 
-````
+`````
