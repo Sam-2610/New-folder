@@ -11,7 +11,7 @@ All examples use the `react.js`, `react-dom.js`, and `babel.js` setup from **Sup
 
 **Code:**
 
-`````jsx
+``jsx
 function App() {
   return (
     <>
@@ -45,7 +45,7 @@ Price: $10.90
 
 **Code:**
 
-````jsx
+``jsx
 function App() {
   return (
     <>
@@ -76,7 +76,7 @@ Key Concepts:
 
 **Code:**
 
-````jsx
+``jsx
 function App() {
   const name = "John";
   return (
@@ -88,6 +88,7 @@ function App() {
 }
 const container = document.querySelector(".js-container");
 ReactDOM.createRoot(container).render(<App />);
+
 
 Key Concepts:
 
@@ -103,7 +104,7 @@ Key Concepts:
 
 **Code:**
 
-````jsx
+``jsx
 function Product(props) {
   return (
     <>
