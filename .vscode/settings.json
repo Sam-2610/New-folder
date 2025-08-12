@@ -15,5 +15,11 @@
         }
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [
+        {
+            "path": "Python Practice Set(Code  With Harry)",
+            "envManager": "ms-python.python:system",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
 }
