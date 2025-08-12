@@ -14,16 +14,6 @@ The clock updates every second and features a **blinking colon** effect for a re
 ---
 
 
----
-
-## ✨ Features
-- Displays the **current time** in 24-hour format (`HH:mm:ss`)
-- **Blinking colon** between hours and minutes
-- Clean, centered layout with subtle shadows
-- Responsive design for all screen sizes
-- Uses **Day.js** for accurate time formatting
-
----
 
 
 
