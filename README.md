@@ -11,7 +11,7 @@
 
 ## 🛠️ Skills
 
-- **Languages:** Python, Java, JavaScript, HTML, CSS
+- **Languages:** Python, Java, React, JavaScript, HTML, CSS
 - **Tools:** VS Code, Git, GitHub, MySQL
 - **Other:** Problem Solving, Debugging, Basic OOP Concepts
 
