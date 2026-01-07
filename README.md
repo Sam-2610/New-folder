@@ -18,7 +18,7 @@
 ## 📫 Connect With Me
 
 - 📧 Email: satyamsagar827@gmail.com
-- 🌐 LinkedIn: Not Yet..
+- 🌐 LinkedIn: https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BXozMBETpRZSUwflQjPS4HA%3D%3D
 - 📝 Portfolio: Coming soon...
 
 ---
