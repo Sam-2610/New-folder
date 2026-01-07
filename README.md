@@ -53,7 +53,7 @@
 
 - 📧 Email: **satyamsagar827@gmail.com**  
 - 🌐 LinkedIn: **https://www.linkedin.com/in/satyam-sagar-594a75371/**  
-- 💻 GitHub: *(Add your GitHub profile link here)*  
+- 💻 GitHub: **https://github.com/Sam-2610/** 
 - 📝 Portfolio: Coming soon...
 
 ---
