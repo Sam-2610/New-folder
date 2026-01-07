@@ -16,44 +16,14 @@
 
 ## 🛠️ Skills
 
-**Languages & Technologies**  
-- Python  
-- Java  
-- JavaScript  
-- React  
-- HTML  
-- CSS  
-- SQL (MySQL)
-
-**Concepts**  
-- Data Structures & Algorithms (Python)  
-- Object-Oriented Programming (OOP)  
-- Database Queries & Joins  
-- Machine Learning & AI Fundamentals  
-- Front-End Development  
-
-**Tools**  
-- VS Code  
-- Git  
-- GitHub  
-- MySQL  
-- Windows Terminal  
-
----
-
-## 📜 Certifications
-
-- **AI Concepts for Developers and Technology Professionals – Microsoft**  
-- **Machine Learning & Model Fundamentals**  
-- **Career Guidance & Technology Awareness – Skill Dunia Edutech**
-
----
+- **Languages:** Python, Java, JavaScript, HTML, CSS
+- **Tools:** VS Code, Git, GitHub, MySQL
+- **Other:** Problem Solving, Debugging, Basic OOP Concepts
 
 ## 📫 Connect With Me
 
-- 📧 Email: **satyamsagar827@gmail.com**  
-- 🌐 LinkedIn: **https://www.linkedin.com/in/satyam-sagar-594a75371/**  
-- 💻 GitHub: *(Add your GitHub profile link here)*  
+- 📧 Email: satyamsagar827@gmail.com
+- 🌐 LinkedIn: Not Yet..
 - 📝 Portfolio: Coming soon...
 
 ---
