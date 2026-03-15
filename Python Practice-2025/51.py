@@ -17,10 +17,10 @@ class Products:
 p1 = Products("Phone",10000)
 print(f"The Name of the Product is {p1.name} and the Price is {p1.price}")
 p1.calculate_discount(p1.price,10)
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------#
 p2 = Products("TV",1000)
 print(f"The Name of the Product is {p2.name} and the Price is {p2.price}")
 p2.calculate_discount(p2.price,12)
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------#
 print(f"The Total Number of Products : {Products.count}")
 
